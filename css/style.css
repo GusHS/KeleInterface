@@ -48,6 +48,26 @@ a:hover{
     transition: transform 0.5s cubic-bezier(0.075, 0.2, 0.05, 1.0) background 0.5s cubic-bezier(0.075, 0.2, 0.05, 1.0) opacity 0.55s ease;
 }
 
-.hmb-btn :first-child{
+.hmb-btn:first-child{
     transform-origin: 0% 0%;
 }
+
+.hmb-btn:nth-last-child(2){
+    transform-origin: 0% 0%;
+}
+
+#menuToggle input:checked ~ .hmb-btn{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #222222;
+}
+
+#menuToggle input:checked ~ .hmb-btn:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2,0.2);
+}
+
+#menuToggle input:checked ~ .hmb-btn:nth-last-child(2){
+    transform: rotate(-45deg) translate(0,-1px);
+}
+/*https://codepen.io/erikterwan/pen/EVzeRP?editors=1100*/
